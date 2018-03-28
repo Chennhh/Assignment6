@@ -2,13 +2,13 @@
 title: "Assignment6"
 author: "CHEN HONG"
 date: "3/27/2018"
-output: pdf_document
+output: ioslides_presentation
 ---
 
-```{r setup, include=FALSE}
+```{r setup, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-##Bude
+## Bude
 ![Bude,England UK](Extra-Large.jpg)
 Bude is a small seaside resort town in north Cornwall, England, UK, in the civil parish of Bude-Stratton and at the mouth of the River Neet (also known locally as the River Strat). It is sometimes formerly known as Bude Haven. It lies southwest of Stratton, south of Flexbury and Poughill, and north of Widemouth Bay and is located along the A3073 road off the A39. Bude is twinned with Ergué-Gabéric in Brittany, France.
 
@@ -26,7 +26,7 @@ There are some noticeable vacations spots in Bude. There is a cricket playground
 
 
 
-```{r ,message=FALSE, warning=FALSE, echo = FALSE}
+```{r message=FALSE, warning=FALSE, echo = FALSE}
 
 Waterbude<- get_map(location = c(-4.5413, 50.82435), zoom = 14, maptype = "watercolor")
 Roadmap <- get_map(location = c(-4.5413, 50.82435), zoom = 13, maptype = "roadmap")
@@ -46,8 +46,8 @@ The blue points in the following graph are two beaches resorts, yellow point is 
 
 ![The Bar 35 at Bude](0.jpg )
 
-```{r message=FALSE, warning=FALSE echo=FALSE}
-oadmap <- get_map(location = c(-4.5413, 50.82435), zoom = 14, maptype = "roadmap")
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+roadmap <- get_map(location = c(-4.5413, 50.82435), zoom = 14, maptype = "roadmap")
 ggmap(roadmap)
 
 ggmap(roadmap) +
@@ -75,7 +75,7 @@ The red line in the graph is the road from the Pub to the cricket club. This pub
 ![The cricket at Bude](budec.jpg )
 
 
-```{r message=FALSE, warning=FALSE echo=FALSE}
+```{r message=FALSE, warning=FALSE, echo=FALSE}
 from <- "Bar 35,bude"
 to <- "Bude North Cornwall Cricket Club,bude"
 route_df <- route(from, to, structure = "route")
@@ -90,7 +90,7 @@ ggmap(roadmap) +
 
 ![The Bude](map_budelores.jpg )
 
-```{r message=FALSE, warning=FALSE echo=FALSE}
+```{r message=FALSE, warning=FALSE, echo=FALSE}
 Waterbude<- get_map(location = c(-4.5413, 50.82435), zoom = 14, maptype = "watercolor")
 
 ggmap(Waterbude) +
@@ -112,7 +112,7 @@ ggmap(Waterbude) +
 ## Watercolor road map from bar 35 to Bude North Cornwall Cricket Club
 
 ![The road](42212062d2dbf181dc1b1eaa160dce53.jpg )
-```{r message=FALSE, warning=FALSE echo=FALSE}
+```{r message=FALSE, warning=FALSE, echo=FALSE}
 
 from <- "Bar 35,bude"
 to <- "Bude North Cornwall Cricket Club,bude"
